@@ -1,39 +1,65 @@
-**Welcome to your Base44 project** 
+# ellesimsworld
 
-**About**
+A showcase site for Sims 4 mods by ellesimsworld.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## About
 
-This project contains everything you need to run your app locally.
+This is a static React site featuring:
+- Mod catalog with images and descriptions
+- Mod compatibility tracker
+- Featured releases and downloads
+- FAQ and help pages
 
-**Edit the code in your local development environment**
+## Tech Stack
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+- **React** with React Router
+- **Vite** for build tooling
+- **Tailwind CSS** for styling
+- **Cloudflare Pages** for hosting
 
-**Prerequisites:** 
+## Local Development
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
-
+1. Clone the repository
+2. Install dependencies:
+```bash
+   npm install
 ```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+3. Run dev server:
+```bash
+   npm run dev
+```
+4. Open `http://localhost:5173`
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
+## Project Structure
+src/
+├── components/     # Reusable UI components
+├── pages/          # Page components
+├── data/           # JSON data files (mods, tracker)
+└── App.jsx         # Main app component
+public/
+└── images/         # Mod images and assets
+
+## Updating Content
+
+### Adding/Editing Mods
+Edit `src/data/mods-cleaned.json` with mod details.
+
+### Updating Mod Tracker
+Edit `src/data/mod-tracker.json` with compatibility status.
+
+### Adding Images
+Place images in `public/images/` and reference as `/images/filename.png`
+
+## Deployment
+
+Automatically deploys to Cloudflare Pages on push to `main` branch.
+
+Live site: [Your custom domain here]
+
+## Build
+
+```bash
+npm run build
 ```
 
-Run the app: `npm run dev`
-
-**Publish your changes**
-
-Open [Base44.com](http://Base44.com) and click on Publish.
-
-**Docs & Support**
-
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
-
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Outputs to `dist/` folder.
