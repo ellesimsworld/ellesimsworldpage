@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-lora: 'Lora', serif;
+
+    --background: 30 5% 87%;
+    --foreground: 28 8% 22%;
+    --card: 30 5% 90%;
+    --card-foreground: 28 8% 22%;
+    --popover: 30 5% 90%;
+    --popover-foreground: 28 8% 22%;
+    --primary: 28 8% 22%;
+    --primary-foreground: 30 5% 87%;
+    --secondary: 30 4% 82%;
+    --secondary-foreground: 28 8% 22%;
+    --muted: 30 4% 82%;
+    --muted-foreground: 28 6% 42%;
+    --accent: 30 4% 78%;
+    --accent-foreground: 28 8% 22%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 6% 72%;
+    --input: 28 6% 72%;
+    --ring: 28 8% 22%;
+    --chart-1: 28 20% 45%;
+    --chart-2: 30 15% 55%;
+    --chart-3: 25 10% 35%;
+    --chart-4: 35 18% 50%;
+    --chart-5: 20 12% 40%;
+    --radius: 0.25rem;
+    --sidebar-background: 30 5% 90%;
+    --sidebar-foreground: 28 8% 22%;
+    --sidebar-primary: 28 8% 22%;
+    --sidebar-primary-foreground: 30 5% 87%;
+    --sidebar-accent: 30 4% 82%;
+    --sidebar-accent-foreground: 28 8% 22%;
+    --sidebar-border: 28 6% 72%;
+    --sidebar-ring: 28 8% 22%;
+  }
+
+  .dark {
+    --background: 28 8% 10%;
+    --foreground: 30 5% 87%;
+    --card: 28 8% 12%;
+    --card-foreground: 30 5% 87%;
+    --popover: 28 8% 12%;
+    --popover-foreground: 30 5% 87%;
+    --primary: 30 5% 87%;
+    --primary-foreground: 28 8% 10%;
+    --secondary: 28 6% 18%;
+    --secondary-foreground: 30 5% 87%;
+    --muted: 28 6% 18%;
+    --muted-foreground: 30 4% 60%;
+    --accent: 28 6% 18%;
+    --accent-foreground: 30 5% 87%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 6% 22%;
+    --input: 28 6% 22%;
+    --ring: 30 5% 87%;
+    --chart-1: 28 20% 55%;
+    --chart-2: 30 15% 45%;
+    --chart-3: 25 10% 50%;
+    --chart-4: 35 18% 60%;
+    --chart-5: 20 12% 55%;
+    --sidebar-background: 28 8% 10%;
+    --sidebar-foreground: 30 5% 87%;
+    --sidebar-primary: 30 5% 87%;
+    --sidebar-primary-foreground: 28 8% 10%;
+    --sidebar-accent: 28 6% 18%;
+    --sidebar-accent-foreground: 30 5% 87%;
+    --sidebar-border: 28 6% 22%;
+    --sidebar-ring: 30 5% 87%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-lora);
+  }
+}
