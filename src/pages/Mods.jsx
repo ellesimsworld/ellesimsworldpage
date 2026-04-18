@@ -6,13 +6,6 @@ export default function Mods() {
 
   const filtered = modsData.filter((m) => m.category === activeTab);
 
-  // DEBUG: Log the first mod to see what we're getting
-  console.log('First filtered mod:', filtered[0]);
-  if (filtered[0]) {
-    console.log('Patreon link:', filtered[0].patreon_link);
-    console.log('Link check:', filtered[0].patreon_link && filtered[0].patreon_link.trim() !== '');
-  }
-
   return (
     <div className="max-w-5xl mx-auto px-6 py-12">
       <h1 className="font-lora text-3xl font-semibold tracking-wide mb-2">Mods</h1>
@@ -41,43 +34,51 @@ export default function Mods() {
           No {activeTab.toLowerCase()} mods yet.
         </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {filtered.map((mod, index) => {
+        <div key={activeTab} className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {filtered.map((mod) => {
             const hasLink = mod.patreon_link && mod.patreon_link.trim() !== '';
             const CardWrapper = hasLink ? 'a' : 'div';
-            const linkProps = hasLink ? {
-              href: mod.patreon_link,
-              target: '_blank',
-              rel: 'noopener noreferrer'
-            } : {};
+            const linkProps = hasLink
+              ? {
+                  href: mod.patreon_link,
+                  target: '_blank',
+                  rel: 'noopener noreferrer',
+                }
+              : {};
 
             return (
-              <CardWrapper 
-                key={index} 
+              <CardWrapper
+                key={mod.title}
                 className={`group ${hasLink ? 'cursor-pointer' : ''}`}
                 {...linkProps}
               >
                 <div className="aspect-video overflow-hidden rounded bg-secondary/50 mb-4">
                   {mod.image_url ? (
                     <img
+                      key={mod.image_url}
                       src={mod.image_url}
                       alt={mod.title}
                       className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-muted-foreground text-xs italic">No image</span>
+                      <span className="text-muted-foreground text-xs italic">
+                        No image
+                      </span>
                     </div>
                   )}
                 </div>
+
                 <h3 className="font-lora text-base font-medium tracking-wide mb-1">
                   {mod.title}
                 </h3>
+
                 {mod.description && (
                   <p className="font-lora text-sm text-muted-foreground leading-relaxed">
                     {mod.description}
                   </p>
                 )}
+
                 {!hasLink && (
                   <p className="font-lora text-xs text-muted-foreground italic mt-2">
                     Download link coming soon
