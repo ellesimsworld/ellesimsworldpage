@@ -5,7 +5,7 @@ export default function FeaturedRow({ featured }) {
   return (
     <section className="max-w-5xl mx-auto px-6 py-12">
       <div className="flex items-center justify-between mb-8">
-        <h3 className="font-lora text-lg tracking-wide">Latest Mods</h3>
+        <h3 className="font-lora text-lg tracking-wide">Recent Mods</h3>
         <Link
           to="/mods"
           className="font-lora text-sm text-muted-foreground hover:text-foreground transition-colors tracking-wide"
