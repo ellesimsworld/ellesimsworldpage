@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import modsData from '@/data/mods-cleaned.json';
+import ModImage from '@/components/ModImage';
 
 export default function Mods() {
   const [activeTab, setActiveTab] = useState('Gameplay');
@@ -52,22 +53,16 @@ export default function Mods() {
                 className={`group ${hasLink ? 'cursor-pointer' : ''}`}
                 {...linkProps}
               >
-                <div className="aspect-video overflow-hidden rounded bg-secondary/50 mb-4">
-                  {mod.image_url ? (
-                    <img
-                      key={mod.image_url}
-                      src={mod.image_url}
-                      alt={mod.title}
-                      className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-muted-foreground text-xs italic">
-                        No image
-                      </span>
-                    </div>
-                  )}
-                </div>
+                {/* 👇 THIS is the important change */}
+                {mod.image_url ? (
+                  <ModImage src={mod.image_url} alt={mod.title} />
+                ) : (
+                  <div className="aspect-video overflow-hidden rounded bg-secondary/50 mb-4 flex items-center justify-center">
+                    <span className="text-muted-foreground text-xs italic">
+                      No image
+                    </span>
+                  </div>
+                )}
 
                 <h3 className="font-lora text-base font-medium tracking-wide mb-1">
                   {mod.title}
