@@ -33,7 +33,7 @@ export default function HeroSection({ hero }) {
         )}
         <div className="space-y-3">
           <p className="font-lora text-xs tracking-widest uppercase text-muted-foreground">
-            Latest Release • Early Access
+            Latest Release • Public
           </p>
 
           {hero.title && (
