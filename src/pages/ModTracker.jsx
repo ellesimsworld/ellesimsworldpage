@@ -6,6 +6,7 @@ const statusStyles = {
   Broken: 'bg-red-100 text-red-800 border-red-200',
   Compatible: 'bg-green-100 text-green-800 border-green-200',
   Updated: 'bg-blue-100 text-blue-800 border-blue-200',
+  Testing: 'bg-orange-100 text-orange-800 border-orange-200',
   Retired: 'bg-gray-200 text-gray-600 border-gray-300',
 };
 
@@ -19,7 +20,7 @@ export default function ModTracker() {
       
       <div className="mb-10">
         <span className="inline-block font-lora text-xs tracking-wide px-3 py-1.5 rounded-full border bg-blue-50 text-blue-800 border-blue-200">
-          Current Game Version: 1.122.218.1030
+          Current Game Version: 1.124.54.1030
         </span>
       </div>
 
