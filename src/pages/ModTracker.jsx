@@ -37,7 +37,7 @@ export default function ModTracker() {
                   Mod
                 </th>
                 <th className="font-lora text-xs tracking-widest uppercase text-muted-foreground text-left py-3 pr-4">
-                  Last Updated
+                  Last Tested/Updated
                 </th>
                 <th className="font-lora text-xs tracking-widest uppercase text-muted-foreground text-left py-3">
                   Status
