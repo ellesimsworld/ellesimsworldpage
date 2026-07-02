@@ -49,7 +49,7 @@ export default function HeroSection({ hero }) {
           )}
 
           <a
-            href="https://www.patreon.com/posts/download-origins-155727110?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+            href="https://www.patreon.com/ellesimsworld/posts/download-pour-161915986?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block mt-4 px-5 py-2 bg-[#3e3a35] text-white text-sm font-semibold rounded hover:bg-[#2f2b27] transition"
