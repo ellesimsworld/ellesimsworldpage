@@ -5,9 +5,9 @@ import FeaturedRow from '../components/home/FeaturedRow';
 
 export default function Home() {
 const hero = {
-  title: "Origins",
-  description: "Ever wanted to explore where your Sim is REALLY from? Hopefully this mod can help you do that! This mod introduces native types, accents, passports, and more!",
-  image_url: "/images/Origins.png"
+  title: "Pour Decisions",
+  description: "We've all made...'pour' decisions at some point in our lives. This mini mod allows you to give your Sim a 'drunk type' (basically you decide what type of Sim they are when they're drunk).",
+  image_url: "/images/PourDecisions.png"
 };
 
   const featuredModTitles = [
