@@ -11,7 +11,7 @@ const hero = {
 };
 
   const featuredModTitles = [
-    "Better Brand Sponsorships",
+    "Origins",
     "Timelines", 
     "Romantica"
   ];
