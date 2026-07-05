@@ -13,7 +13,7 @@ const hero = {
   const featuredModTitles = [
     "Illicit Affairs",
     "Origins", 
-    "Timelines"
+    "Better Brand Sponsorships"
   ];
   
   const featured = modsData.filter(mod => 
