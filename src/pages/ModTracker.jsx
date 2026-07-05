@@ -20,7 +20,7 @@ export default function ModTracker() {
       
       <div className="mb-10">
         <span className="inline-block font-lora text-xs tracking-wide px-3 py-1.5 rounded-full border bg-blue-50 text-blue-800 border-blue-200">
-          Current Game Version: 1.124.54.1030
+          Current Game Version: 1.125.59.1030
         </span>
       </div>
 
