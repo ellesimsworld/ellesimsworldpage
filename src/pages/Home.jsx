@@ -11,9 +11,9 @@ const hero = {
 };
 
   const featuredModTitles = [
-    "Origins",
-    "Timelines", 
-    "Romantica"
+    "Illicit Affairs",
+    "Origins", 
+    "Timelines"
   ];
   
   const featured = modsData.filter(mod => 
